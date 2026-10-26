@@ -18,6 +18,7 @@ public class InteractionUI : MonoBehaviour
         
     }
 
+
     public void ShowInteraction(string text)
     {
         interactionText.gameObject.SetActive(true);
