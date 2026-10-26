@@ -9,6 +9,8 @@ public class PlayerLife : MonoBehaviour
     private Animator _animator;
     private SoundPlayer _audioPlayer;
 
+    public Canvas GameOver;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -22,6 +24,16 @@ public class PlayerLife : MonoBehaviour
         _animator.SetTrigger("Hurt");
         _audioPlayer.PlayAudio(SoundFX.Hurt);
         UpdateUI();
+
+        if (_life <= 0)
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        GameOver.gameObject.SetActive(true);
     }
 
     public void Heal(int heal)
