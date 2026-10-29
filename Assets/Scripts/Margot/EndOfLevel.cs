@@ -56,7 +56,7 @@ public class EndOfLevel : MonoBehaviour
                     inZoneE = true;
                     InteractionUI.Instance.ShowInteraction("Game finished. Press E to finish the game.");
                 }
-                else if (!PlayerInventory.Instance.IsInInventory("REDGEM"))
+                else
                 {
                     inZoneE = true;
                     InteractionUI.Instance.ShowInteraction("Go back to grab the gems.");
