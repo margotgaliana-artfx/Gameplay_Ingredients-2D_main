@@ -54,7 +54,7 @@ public class EndOfLevel : MonoBehaviour
                 if (PlayerInventory.Instance.IsInInventory("REDGEM") && PlayerInventory.Instance.IsInInventory("GREENGEM"))
                 {
                     inZoneE = true;
-                    InteractionUI.Instance.ShowInteraction("Game finished. Press E to finish the game.");
+                    InteractionUI.Instance.ShowInteraction("Game finished. Press E to finish the game.");//Les scripts d'interactions ne marchent pas dans le second niveau. Pourquoi?
                 }
                 else
                 {

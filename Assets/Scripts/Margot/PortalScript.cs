@@ -14,7 +14,7 @@ public class PortalScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inZone && Input.GetKeyDown(KeyCode.R))
+        if (inZone && Input.GetKeyDown(KeyCode.R)) // Je peux supprimer le portail meme si l'interaction n'est pas la.
         {
             gameObject.SetActive(false);
             PlayerInventory.Instance.RemoveItemFromInventory("GREENKEY");
@@ -31,7 +31,7 @@ public class PortalScript : MonoBehaviour
             if (PlayerInventory.Instance.IsInInventory("GREENKEY") && PlayerInventory.Instance.IsInInventory("ORANGEKEY") && PlayerInventory.Instance.IsInInventory("YELLOWKEY"))
             {
                 Debug.Log("YAY t'as les clés");
-                InteractionUI.Instance.ShowInteraction("You have every keys. You can pass. Press - R.");
+                InteractionUI.Instance.ShowInteraction("You have every keys. You can pass. Press - R."); //Les scripts d'interactions ne marchent pas dans le second niveau. Pourquoi?
             }
 
             else 
