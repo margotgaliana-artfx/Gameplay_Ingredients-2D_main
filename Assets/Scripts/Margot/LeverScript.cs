@@ -47,7 +47,6 @@ public class LeverScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
             if (PlayerInventory.Instance.IsInInventory("LEVERHANDLE")||repaired)
             {
                 Debug.Log("Tu as le levier");            

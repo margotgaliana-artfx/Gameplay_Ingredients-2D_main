@@ -28,10 +28,10 @@ public class PortalScript : MonoBehaviour
             if (PlayerInventory.Instance.IsInInventory("GREENKEY") && PlayerInventory.Instance.IsInInventory("ORANGEKEY") && PlayerInventory.Instance.IsInInventory("YELLOWKEY"))
             {
                 Debug.Log("YAY t'as les clés");
-                InteractionUI.Instance.ShowInteraction("You have every keys. You can pass. Press R to interact.");
+                InteractionUI.Instance.ShowInteraction("You have every keys. You can pass. Press - R.");
             }
 
-            else if(!PlayerInventory.Instance.IsInInventory("GREENKEY") && !PlayerInventory.Instance.IsInInventory("ORANGEKEY") && !PlayerInventory.Instance.IsInInventory("YELLOWKEY"))
+            else 
             {
                 Debug.Log("T'as pas les clés frerot...");
                 InteractionUI.Instance.ShowInteraction("You don't have every keys. Go grab them.");
