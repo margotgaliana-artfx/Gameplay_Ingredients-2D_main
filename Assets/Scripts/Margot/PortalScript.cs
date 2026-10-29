@@ -17,6 +17,9 @@ public class PortalScript : MonoBehaviour
         if (inZone && Input.GetKeyDown(KeyCode.R))
         {
             gameObject.SetActive(false);
+            PlayerInventory.Instance.RemoveItemFromInventory("GREENKEY");
+            PlayerInventory.Instance.RemoveItemFromInventory("ORANGEKEY");
+            PlayerInventory.Instance.RemoveItemFromInventory("YELLOWKEY");
         }
     }
 
